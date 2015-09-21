@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BoonesGuide</title>
+		<meta name="description" content="">
+		
+		<link rel='stylesheet' media="only screen" href='./css/globalDesktop.css' />	
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable = no">
+		
+	
+		<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js"></script>
+		-->
+        <script src="//www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js"></script>
+		<script src="./js/typed.js"></script>
+		<script src="./js/global.js"></script>
+        <script>
+            function signUp() {
+                Parse.initialize("1f4PXg2SEWrZTqrFQ3QMb53ZWliIB0B0rMnKdGBT", "Zcn6w6HG4EMKZ0VId5AP8mxsCy9gF2HIgtIpRkY8");
+                
+                event.preventDefault();
+               
+                var user = new Parse.User();
+
+                var oForm = document.getElementById("sign-up-popup");
+                var name = oForm.elements["first_name"].value;
+                var first_name = oForm.elements["first_name"].value;
+                var last_name = oForm.elements["last_name"].value;
+                var email = oForm.elements["email"].value;
+                var password = oForm.elements["password1"].value;
+    
+                user.set("username", email);
+                user.set("firstName", first_name);
+                user.set("lastName", last_name);
+                user.set("email", email);
+                user.set("password", password);
+
+                user.signUp(null, {
+                    success: function(user) {
+                        // Hooray! Let them use the app now.
+                        location.reload();
+                    },
+                    error: function(user, error) {
+                        // Show the error message somewhere and let the user try again.
+                        alert("Error: " + error.code + " " + error.message);
+                        location.reload();
+                    }
+                });
+            }
+        </script>
+	</head>
+	<body>
+		<div class="first-section">
+			<div id="how-it-works">
+					<img src="./css/images/HowItWorks1.png">
+					<img src="./css/images/HowItWorks2.png">
+					<img src="./css/images/HowItWorks3.png">
+					<p><span>Discover Incredible Experiences</span></br></br>Find authentic experiences hosted by people who are passionate and accomplished in their areas of expertise</p>
+					<p><span>Sign Up</span></br></br>Register, connect with our hosts, find your perfect experience, and pay, all through BoonesGuide's trusted services.</p>
+					<p><span>Have a Great Time</span></br></br>Expand your horizons, do things you've always dreamed about, find your new passion, all with a peer who will make sure your experience is amazing.</p>
+					<p><span>Share Your Passion</span></br></br>Learn more about sharing your passion or expertise with others. Learn more on <a href="#">How to Host</a>.</p>
+			</div>
+			<form method="post" id="sign-up-popup" name="sign-up" onsubmit="signUp();">
+				<img src="./css/images/Sign up alternatives.png">
+				<input type="text" name="first_name" placeholder="First name">
+				<input type="text" name="last_name" placeholder="Last name">
+				<input type="email" name="email" placeholder="Email Address">	
+				<input type="password" name="password1" placeholder="Password">	
+				<input type="password" name="password2" placeholder="Confirm Password">
+				<input class="checkbox" type="checkbox" name="vehicle" value="Bike">Tell me about BoonesGuide news
+				<p>By signing up, I agree to BoonesGuide's <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, <a href="#">Guest Refund Policy</a>, and <a href="#">Host Guarantee Terms</a>.
+				</p>
+				<input type="submit" class="button" value="Sign Up" ><p>Sign up</p>
+				<hr>
+				<p>Already a BoonesGuide member? <a id="log-in" href="#">Log in</a></p>	
+			</form>
+			<div id="log-in-popup">
+				<img src="./css/images/Sign up alternatives.png">
+				<input type="text" placeholder="Email Address">	
+				<input type="password" placeholder="Password">	
+				<input class="checkbox" type="checkbox" name="vehicle" value="Bike">Remember me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Forgot password?</a>
+				<div class="button"><p>Log In</p></div>
+				<hr>
+				<p>Don't have an account? <a id="sign-up" href="#">Sign Up</a></p>	
+			</div>
+			<div class="top-banner">
+				<ul>
+					<li>Log In</li>
+					<li>Sign Up</li>
+					<li>Help</li>
+				</ul>
+				<div class="button">
+					<a href="/ListExperience.html"><p>List your experience</p></a>
+				</div>
+			</div>
+			<img src="./css/images/main fly fisherman.png">
+				<p class="title">Find your experience</p>
+				<p class="sub-title">Join Thousands of Passionate People Everywhere</p>
+				<h2>How it Works</h2>
+				<div id="how-it-works-button" class="button">
+				</div>
+				<div class="search-area">
+				</div>
+				<form class="search">
+				<input id="activity-form" type="text" placeholder="What do you want to do?">
+				<input type="text" placeholder="Where?">
+				<input type="text" placeholder="When?">
+				</form>
+				<div class="search-button">
+					<a href="#">Search</a>
+				</div>
+				<ul id="search-dropdown">
+					<li id="option-sail">Sailing</li>
+					<li id="option-fish">Fly Fishing</li>
+					<li id="option-surf">Surfing</li>
+					<li id="option-paint">Painting</li>
+				</ul>
+		</section>
+		
+		<div class="second-section">
+			<div class="title">Try Something New</div>
+			<div class="sub-title">Let Passionate Enthusiasts Lead the Way</div>
+			<div class="grid">
+				<img src="./css/images/san fran sailing.png">
+				<img src="./css/images/montana fly fishing.png">
+				<img src="./css/images/hawaii surf.png">
+				<img src="./css/images/san diego horseback.png">
+				<img src="./css/images/Santa Fe.png">
+				<img src="./css/images/hollywood photography.png">
+				<img src="./css/images/Cooking.png">
+				<div class="label sail"><a href="./Sailing.html"><p>Sailing in San Francisco</p></a></div>
+				<div class="label fly-fishing"><a href="./FlyFishing.html"><p>Montana Fly Fishing</p></a></div>
+				<div class="label surf"><a href="/Surfing.html"><p>Surfing in Hawaii</p></a></div>
+				<div class="label horseback"><p>Horseback Riding San Diego</p></div>
+				<div class="label hunting"><a href="./Painting.html"><p>Painting in Santa Fe</p></a></div>
+				<div class="label photography"><p>Photography in Hollywood</p></div>
+				<div class="label racing"><p>Cooking in Chicago</p></div>
+			</div>
+			<div class="show-button">Show More</div>
+		</div>
+		
+		<div class="third-section">
+			<h1>Our Community</h1>
+			
+			<img src="./css/images/lou.png">
+			<img src="./css/images/Cody.png">
+			<img src="./css/images/Jessica.png">
+			<img src="./css/images/gardener.png">
+			
+			<div class="label lou"><p>Lou</p></div>
+			<div class="label chief"><p>Cody</p></div>
+			<div class="label chef"><p>Jessica</p></div>
+			<div class="label gardener"><p>Christine</p></div>
+			
+			<div class="sub-label lou"><p>Sailor Extraordinare San Francisco, CA</p></div>
+			<div class="sub-label chief"><p>Singer/Songwriter Nashville</p></div>
+			<div class="sub-label chef"><p>Master Baker Baltimore</p></div>
+			<div class="sub-label gardener"><p>Avid Gardener Boston, MA</p></div>
+			
+		</div>
+		
+		<div class="fourth-section">
+			<ul>
+				<li>
+					<p>Company</p>
+					<ul>
+						<li>Ideas</li>
+						<li>Search</li>
+					</ul>
+				</li>
+				
+				<li>
+					<p>Discover</p>
+					<ul>
+						<li>About</li>
+						<li>Jobs</li>
+						<li>Press</li>
+						<li>Blog</li>
+						<li>Help</li>
+						<li>Privacy</li>
+						<li>Terms and Policies</li>
+					</ul>
+				</li>
+				
+				<li>
+					<p>Experiences</p>
+					<ul>
+						<li>Finding</li>
+						<li>Hosting</li>
+						<li>Ratings</li>
+					</ul>
+				</li>
+			</ul>
+			<hr>
+			<h1>Join Us On</h1>
+			<img class="img1" src="./css/images/pinterest.png"></img>
+			<img class="img2" src="./css/images/facebook.png"></img>
+			<img class="img3" src="./css/images/twitter.png"></img>
+		</div>
+	</div>
+	<div id="shadow">
+	</div>									
+	</body>
+</html>

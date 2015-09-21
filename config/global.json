@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Boonesguide": {
+            "applicationId": "1f4PXg2SEWrZTqrFQ3QMb53ZWliIB0B0rMnKdGBT", 
+            "masterKey": "zT1X1HwZpZNfRUxOcOt54K4h8pxYRPGZrPHCVW16"
+        }, 
+        "_default": {
+            "link": "Boonesguide"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.0"
+    }
+}

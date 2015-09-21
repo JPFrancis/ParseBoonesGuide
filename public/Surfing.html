@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BoonesGuide-Search Results</title>
+		<link rel="stylesheet" href="./css/FlyFishingMain.css">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js"></script>
+		<script src="./js/global.js"></script>
+	</head>
+	<body>
+		<form action="/boonesguide/register/" method="post" id="sign-up-popup">
+				<img src="./css/images/Sign up alternatives.png">
+				<input type="text" name="first_name" placeholder="First name">
+				<input type="text" name="last_name" placeholder="Last name">
+				<input type="email" name="email" placeholder="Email Address">	
+				<input type="password" name="password1" placeholder="Password">	
+				<input type="password" name="password2" placeholder="Confirm Password">
+				<input class="checkbox" type="checkbox" name="vehicle" value="Bike">Tell me about BoonesGuide news
+				<p>By signing up, I agree to BoonesGuide's <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, <a href="#">Guest Refund Policy</a>, and <a href="#">Host Guarantee Terms</a>.
+				</p>
+				<input type="submit" class="button" value="Sign Up" ><p>Sign up</p>
+				<hr>
+				<p>Already a BoonesGuide member? <a id="log-in" href="#">Log in</a></p>	
+        </form>
+		<div id="log-in-popup">
+			<img src="./css/images/Sign up alternatives.png">
+			<input type="text" placeholder="Email Address">	
+			<input type="password" placeholder="Password">	
+			<input class="checkbox" type="checkbox" name="vehicle" value="Bike">Remember me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Forgot password?</a>
+			<div class="button"><p>Log In</p></div>
+			<hr>
+			<p>Don't have an account? <a id="sign-up" href="#">Sign Up</a></p>	
+		</div>
+        <div class="top-banner">
+        	<a href=".."><img src="./css/images/BoonesGuideLogo.png"></a>
+        	<ul>
+        		<li>Log In</li>
+        		<li>Sign Up</li>
+        		<li>Help</li>
+        	</ul>
+        	<div class="button">
+        		<a href="/ListExperience.html"><p>List your experience</p></a>
+        	</div>
+        </div>
+        <hr class="override">
+        <div id="page">
+            <div id="map" style="float:left">            
+                <img src="./css/images/mapSurfing.png" />
+            </div>
+            <div id="rightside" style="float:right">
+                <div class="firstrow" width: 100%>
+                    <label id="experienceLabel">Experience</label>
+                    <form>
+                        <input type="text" placeholder="Surfing" id="experienceInput" required>
+                    </form>
+                    <label id="whereLabel">Where</label>
+                    <form>
+                        <input type="text" placeholder="Hawaii" id="whereInput" required>
+                    </form>
+                </div>
+                <hr>
+                <div class="secondrow" width: 100%>
+                    <label id="datesLabel">Dates</label>
+                    <form>
+                        <input type="text" placeholder="  Begin" id="beginInput" required>
+                    </form>
+                    <form>
+                        <input type="text" placeholder="  End" id="endInput" required>
+                    </form>
+                    <form>
+                        <input type="text" placeholder="  1 Guest" id="guestInput" required>
+                    </form>
+                </div>
+                <hr>
+                <div class="thirdrow" width: 100%>
+                    <label id="withinLabel">Within</label>
+                    <form>
+                        <input type="text" placeholder="  How Many Miles?" id="milesInput" required>
+                    </form>
+                    <label id="requestedLocLabel">of requested location</label>
+                </div>
+            </div>
+            <div id="rightsidegray" style="float:right">
+                 <button type="button">More Filters</button>
+                <label id="requestedLocLabel">300+ Madison River Fishing Destinations</label>
+            </div>
+            <div id="rightsidepics" style="float:right">
+                 <p><img src="./css/images/Surf1.png"/>
+                <img src="./css/images/Surf2.png"/></p>
+                <p id="infoRight" style="float:right" width: 40%>Katherine - Honolulu, HI<br>23 Reviews</p>
+                <p id="infoLeft" style="float:left" width: 40%>Koonoo - Kaneoha, HI<br>31 Reviews</p><br><br><br><br>
+                <p><img src="./css/images/Surf3.png"/>
+                <img src="./css/images/Surf4.png"/></p></p>
+                <p id="infoRight" style="float:right" width: 40%>John - Waipahu, HI<br>45 Reviews</p>
+                <p id="infoLeft" style="float:left" width: 40%>Rick - Kapolei, HI<br>11 Reviews</p><br><br><br><br>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div id="shadow">
+        </div>
+    </body>
+</html>
